@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Snap-Snack Recruitment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f5fdf7;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c7a4b;
+    }
+    .job-section {
+      margin-bottom: 50px;
+    }
+    .job-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .job-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .job-card:hover {
+      transform: translateY(-5px);
+    }
+    .job-card h3 {
+      margin-top: 0;
+      color: #2c7a4b;
+    }
+    .job-details {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+    .filter-bar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .filter-bar input, .filter-bar select {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin: 5px;
+    }
+    footer {
+      background: #2c7a4b;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Eco Snap-Snack Careers</h1>
+    <p>Join our eco-friendly mission to revolutionize vending machine snacks!</p>
+  </header>
+
+  <section>
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      Eco Snap-Snack is dedicated to providing sustainable, healthy, and delicious snacks through innovative vending solutions. We’re looking for passionate, creative, and driven individuals to join our growing family.
+    </p>
+  </section>
+
+  <section>
+    <h2>Open Positions</h2>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <input type="text" id="searchBox" placeholder="Search job titles...">
+      <select id="departmentFilter">
+        <option value="all">All Departments</option>
+        <option value="Marketing & Sales">Marketing & Sales</option>
+        <option value="Operations">Operations</option>
+        <option value="Finance & Accounting">Finance & Accounting</option>
+        <option value="Human Resources">Human Resources</option>
+        <option value="Customer Service">Customer Service</option>
+      </select>
+    </div>
+
+    <!-- Marketing & Sales Department -->
+    <div class="job-section" data-dept="Marketing & Sales">
+      <h3>Marketing & Sales Department</h3>
+      <div class="job-list">
+        <div class="job-card">
+          <h3>Marketing Head</h3>
+          <div class="job-details">
+            <ul>
+              <li>Bachelor’s degree in Business, Marketing, or related field.</li>
+              <li>Strong creativity and leadership skills.</li>
+              <li>Knowledge in branding, promotions, and digital marketing.</li>
+              <li>Excellent communication and presentation skills.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-card">
+          <h3>Sales Executive</h3>
+          <div class="job-details">
+            <ul>
+              <li>Strong interpersonal and persuasive skills.</li>
+              <li>Experience in sales or customer engagement.</li>
+              <li>Goal-oriented and self-motivated.</li>
+              <li>Basic knowledge in pricing and negotiation.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-card">
+          <h3>Content Creator</h3>
+          <div class="job-details">
+            <ul>
+              <li>Skilled in graphic design tools (Canva, Photoshop).</li>
+              <li>Knowledge in social media platforms.</li>
+              <li>Creative, innovative, and detail-oriented.</li>
+              <li>Strong writing and storytelling skills.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Operations Department -->
+    <div class="job-section" data-dept="Operations">
+      <h3>Operations Department</h3>
+      <div class="job-list">
+        <div class="job-card">
+          <h3>Operations Manager</h3>
+          <div class="job-details">
+            <ul>
+              <li>Knowledge of food production and safety standards.</li>
+              <li>Strong organizational and leadership skills.</li>
+              <li>Ability to manage schedules, staff, and workflow.</li>
+              <li>Problem-solving and decision-making ability.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-card">
+          <h3>Production Staff</h3>
+          <div class="job-details">
+            <ul>
+              <li>Knowledge of food handling and hygiene.</li>
+              <li>Ability to work under pressure and in a team.</li>
+              <li>Physically fit and detail-oriented.</li>
+              <li>Willing to follow production guidelines.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-card">
+          <h3>Logistics Coordinator</h3>
+          <div class="job-details">
+            <ul>
+              <li>Strong organizational and time management skills.</li>
+              <li>Ability to track and manage inventory.</li>
+              <li>Problem-solving in handling delays or shortages.</li>
+              <li>Basic computer and record-keeping skills.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finance Department -->
+    <div class="job-section" data-dept="Finance & Accounting">
+      <h3>Finance & Accounting Department</h3>
+      <div class="job-list">
+        <div class="job-card">
+          <h3>Finance Officer</h3>
+          <div class="job-details">
+            <ul>
+              <li>Background in business, accounting, or finance.</li>
+              <li>Strong mathematical and analytical skills.</li>
+              <li>Ability to prepare budgets and monitor expenses.</li>
+              <li>Trustworthy and detail-oriented.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-card">
+          <h3>Bookkeeper</h3>
+          <div class="job-details">
+            <ul>
+              <li>Knowledge in recording daily transactions.</li>
+              <li>Attention to detail and accuracy.</li>
+              <li>Familiarity with spreadsheets.</li>
+              <li>Organized and systematic in handling payroll.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HR Department -->
+    <div class="job-section" data-dept="Human Resources">
+      <h3>Human Resources Department</h3>
+      <div class="job-list">
+        <div class="job-card">
+          <h3>HR Officer</h3>
+          <div class="job-details">
+            <ul>
+              <li>Good understanding of recruitment & policies.</li>
+              <li>Strong communication and conflict-resolution skills.</li>
+              <li>Fair and approachable personality.</li>
+              <li>Ability to motivate and support employees.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-card">
+          <h3>Training Coordinator</h3>
+          <div class="job-details">
+            <ul>
+              <li>Knowledge of training methods.</li>
+              <li>Strong organizational and planning skills.</li>
+              <li>Good communication and presentation ability.</li>
+              <li>Ability to evaluate training effectiveness.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Service Department -->
+    <div class="job-section" data-dept="Customer Service">
+      <h3>Customer Service Department</h3>
+      <div class="job-list">
+        <div class="job-card">
+          <h3>Customer Service Representative</h3>
+          <div class="job-details">
+            <ul>
+              <li>Strong communication and listening skills.</li>
+              <li>Patient, friendly, and approachable.</li>
+              <li>Ability to handle complaints calmly.</li>
+              <li>Quick-thinking and problem-solving skills.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-card">
+          <h3>After-sales Support</h3>
+          <div class="job-details">
+            <ul>
+              <li>Customer-oriented mindset with detail.</li>
+              <li>Ability to track and follow up with clients.</li>
+              <li>Strong organizational skills.</li>
+              <li>Good teamwork and problem-solving.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>📍 Eco Snap-Snack | Contact us: info@ecosnap.com | © 2025</p>
+  </footer>
+
+  <script>
+    // Toggle job details on click
+    document.querySelectorAll('.job-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const details = card.querySelector('.job-details');
+        details.style.display = details.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Search and filter functionality
+    const searchBox = document.getElementById('searchBox');
+    const departmentFilter = document.getElementById('departmentFilter');
+
+    function filterJobs() {
+      const searchText = searchBox.value.toLowerCase();
+      const dept = departmentFilter.value;
+
+      document.querySelectorAll('.job-section').forEach(section => {
+        const sectionDept = section.getAttribute('data-dept');
+        let sectionVisible = false;
+
+        section.querySelectorAll('.job-card').forEach(card => {
+          const title = card.querySelector('h3').innerText.toLowerCase();
+          const matchesSearch = title.includes(searchText);
+          const matchesDept = (dept === 'all' || dept === sectionDept);
+
+          if (matchesSearch && matchesDept) {
+            card.style.display = 'block';
+            sectionVisible = true;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        section.style.display = sectionVisible ? 'block' : 'none';
+      });
+    }
+
+    searchBox.addEventListener('input', filterJobs);
+    departmentFilter.addEventListener('change', filterJobs);
+  </script>
+
+</body>
+</html>
